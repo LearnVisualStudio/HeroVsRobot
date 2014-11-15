@@ -1,0 +1,97 @@
+﻿/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="select"] {
+    max-width: 280px;
+}
+
+.jumbotron {
+  padding: 10px;
+  margin-bottom:0;
+  margin-top:10px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        margin-top: 20px;
+        padding-top: 36px;
+        padding-bottom: 36px;
+    }
+    .body-content {
+        padding: 0;
+    }
+
+  .container .jumbotron {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+  .jumbotron h1,
+  .jumbotron .h1 {
+    font-size: 54px;
+  }
+
+}
+
+.bs-callout {
+    padding:20px;margin:20px 0;border:1px solid #eee;border-left-width:5px;
+    -ms-border-radius:3px;
+    border-radius:3px
+}
+
+.bs-callout h4{margin-top:0;margin-bottom:5px}
+.bs-callout p:last-child{margin-bottom:0}
+.bs-callout code {
+    -ms-border-radius:3px;
+    border-radius:3px
+}
+
+.bs-callout+.bs-callout{margin-top:-5px}
+.bs-callout-danger{border-left-color:#d9534f}
+.bs-callout-danger h4{color:#d9534f}
+.bs-callout-warning{border-left-color:#f0ad4e}
+.bs-callout-warning h4{color:#f0ad4e}
+.bs-callout-info{border-left-color:#5bc0de}
+.bs-callout-info h4{color:#5bc0de}
+
+.headerImage {
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+
+.panel-primary {
+  border-color: #333333;
+}
+.panel-primary > .panel-heading {
+  color: #fff;
+  background-color: #333333;
+  border-color: #333333;
+}
+
+.carousel-caption > h1 {
+    font-size: 300%;
+    font-weight: 800;
+}

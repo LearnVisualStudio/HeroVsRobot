@@ -1,0 +1,115 @@
+
+
+STEP 1 - Open up Developer Command Prompt for VS 2013
+
+
+From:  http://stackoverflow.com/questions/21476588/where-is-developer-command-prompt-for-vs2013
+
+"For some reason, it doesn't properly add an icon when 
+running Windows 8+. Here's how I solved it:
+
+Using Windows Explorer, navigate to:
+
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2013
+
+In that folder, you'll see a shortcut named Visual Studio 
+Tools that maps to (assuming default installation):
+
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\Shortcuts
+
+Double-click the shortcut (or go to the folder above).
+
+From that folder, copy the shortcut named Developer Command 
+Prompt for VS2013 (and any others you find useful) to the 
+first directory (for the Start Menu). You'll likely be 
+prompted for administrative access (do so).
+
+Once you've done that, you'll now have an icon available 
+for the 2013 command prompt."
+
+Launch the Developer Command Prompt for VS2013.
+
+STEP 2 - Create a Certificate.
+
+Create a directory: C:\temp
+
+Nexxt, replace the words "REPLACE-ME" in the command 
+below with a name you want to use.  It can be anything 
+you want.  I use hockey players' names.
+
+makecert -sky exchange -r -n "CN=REPLACE-ME" -pe -a sha1 -len 2048 -ss My "c:\temp\REPLACE-ME.cer"
+
+Copy and paste it into the Developer Command Prompt for VS2013.
+
+
+STEP 3 - Go to Azure Portal
+
+Go to Settings
+Management Certificate tab
+Click Upload button (bottom of screen)
+Use the Browse button and locate the .cer you created in the previous step.
+Click the OK button to upload.
+
+Copy and paste into a Notepad file:
+
+Subscription Name
+Subscription ID
+Thumbprint
+
+
+STEP 4 - Open the Automation\Setup-Local-Machine-For-Automation.ps1
+
+Change the:
+
+$subID
+$thumbprint
+$localSubName
+
+... per the instructions in the file.  I'll make this into 
+a parameterized script at some point.
+
+(I added further instructions in Setup-Local-Machine-For-Automation.txt)
+
+
+STEP 5 - Run Automation\Setup-Local-Machine-For-Automation.ps1
+
+Right-click on the file in the Solution Explorer, select 
+"Open With Powershell ISE".  When Powershell ISE opens, 
+click the run button (green arrow at the top.)
+
+If you run into any errors, they will appear in red text. 
+Put your thinking cap on and try to figure it out.  I 
+can't help you.  Sorry!
+
+
+
+STEP 6 - Open the Setup-Your-Entire-Environment.ps1
+
+Change every single parameter (except, maybe "East US").
+
+(I added more instructions in Setup-Your-Entire-Environment.txt)
+
+
+STEP 7 - Run Setup-Your-Entire-Environment.ps1
+
+Perform the same steps as in Step 4.
+
+
+
+STEP 8 - Update the App.Config and Web.Config files
+
+In the three projects, you'll need to replace 
+connectionStrings and / or appSettings.  I've documented 
+what you need to change. 
+
+
+
+STEP 10 - Compile the solution, set the web project as start up,
+and run it locally.
+
+
+
+STEP 11 - Attempt to deploy to Azure.
+
+
+

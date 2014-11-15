@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeroVsRobot", "HeroVsRobot\HeroVsRobot.csproj", "{19F498B2-C7CF-4DA3-82F3-6E43BFFC334F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{E9391CD1-B79E-4920-B57A-B3B1BD087D4C}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
+		PublishScripts\Publish-WebApplicationWebsite.ps1 = PublishScripts\Publish-WebApplicationWebsite.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{2952C0EE-B748-41E7-9BD3-3B52F8B9288C}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\HeroVsRobot-WAWS-dev.json = PublishScripts\Configurations\HeroVsRobot-WAWS-dev.json
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebJobActivityQueueProcessor", "WebJobActivityQueueProcessor\WebJobActivityQueueProcessor.csproj", "{BFDD1189-208A-4CE3-9F53-C1C5224CABFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebJobHourlyHeroUpdate", "WebJobHourlyHeroUpdate\WebJobHourlyHeroUpdate.csproj", "{EBBC5E50-BE99-4402-A356-B9C2B3A68BF0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Automation", "Automation", "{94780F25-891A-410A-9997-A7ED0F1DF862}"
+	ProjectSection(SolutionItems) = preProject
+		New-AzureSql.ps1 = New-AzureSql.ps1
+		New-AzureStorage.ps1 = New-AzureStorage.ps1
+		New-AzureWebsiteEnv.ps1 = New-AzureWebsiteEnv.ps1
+		Publish-AzureWebsite.ps1 = Publish-AzureWebsite.ps1
+		pubxml.template = pubxml.template
+		Setup-Local-Machine-For-Automation.ps1 = Setup-Local-Machine-For-Automation.ps1
+		Setup-Local-Machine-For-Automation.txt = Setup-Local-Machine-For-Automation.txt
+		Setup-Your-Entire-Environment.ps1 = Setup-Your-Entire-Environment.ps1
+		Setup-Your-Entire-Environment.txt = Setup-Your-Entire-Environment.txt
+		START-HERE.txt = START-HERE.txt
+		website-environment.template = website-environment.template
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{58555104-01AB-4FCD-A23C-F4C3B08C0AFD}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19F498B2-C7CF-4DA3-82F3-6E43BFFC334F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19F498B2-C7CF-4DA3-82F3-6E43BFFC334F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19F498B2-C7CF-4DA3-82F3-6E43BFFC334F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19F498B2-C7CF-4DA3-82F3-6E43BFFC334F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFDD1189-208A-4CE3-9F53-C1C5224CABFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFDD1189-208A-4CE3-9F53-C1C5224CABFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFDD1189-208A-4CE3-9F53-C1C5224CABFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFDD1189-208A-4CE3-9F53-C1C5224CABFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBBC5E50-BE99-4402-A356-B9C2B3A68BF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBBC5E50-BE99-4402-A356-B9C2B3A68BF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBBC5E50-BE99-4402-A356-B9C2B3A68BF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBBC5E50-BE99-4402-A356-B9C2B3A68BF0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2952C0EE-B748-41E7-9BD3-3B52F8B9288C} = {E9391CD1-B79E-4920-B57A-B3B1BD087D4C}
+	EndGlobalSection
+EndGlobal

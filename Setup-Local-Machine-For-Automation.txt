@@ -1,0 +1,15 @@
+In the file: Setup-Local-Machine-For-Automation.ps1
+
+
+... you will need to replace the following values:
+
+
+$subID = "xxxxxxxx-1f05-4a0a-9f2e-8e9b70eb5503"
+
+$thumbprint = "xxxxxxxx607F6A11379103F18C8682CC77A08515"
+
+$localSubName = "Visual Studio Ultimate with MSDN"
+
+
+... that you retrieved from the Azure Management Portal.
+Save the file, right-click, Open in Powershell ISE.

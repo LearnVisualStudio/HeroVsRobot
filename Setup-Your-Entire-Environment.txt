@@ -1,0 +1,48 @@
+Modify this with your own values:
+
+.\New-AzureWebsiteEnv.ps1 -Name ChangeMe `
+	-Location "East US" `
+	-SqlDatabaseUserName AdminUser `
+	-SqlDatabasePassword P@ssw0rd `
+	-StartIpAddress 1.2.3.4 `
+	-EndIPAddress 1.2.3.4 
+
+
+... then copy it into the Setup-Your-Entire-Environment.ps1
+file, right-click, Open in Powershell ISE.
+
+-Name
+=======
+This is what you want everything to be called. Ex. HeroVsZombie
+will create a Website named HeroVsZombie, a Storage account named
+HeroVsZombieStorage, and an Azure SQL database called 
+HeroVsZombie_db.
+
+-Location
+==========
+Must be one of these locations:
+
+    Valid values: 
+    -- East Asia 
+    -- East US 
+    -- North Central US 
+    -- North Europe 
+    -- West Europe 
+    -- West US  
+
+
+-SqlDatabaseUserName AdminUser
+-SqlDatabasePassword P@ssw0rd
+================================
+Username and password for the new Azure SQL database.
+
+
+-StartIpAddress 1.2.3.4
+-EndIPAddress 1.2.3.4
+===========================
+Go to: http://www.whatismyip.com/
+
+and replace BOTH values with your IP address.
+This is required so that Azure SQL can make
+a firewall rule allowing the further admin
+from your computer.
