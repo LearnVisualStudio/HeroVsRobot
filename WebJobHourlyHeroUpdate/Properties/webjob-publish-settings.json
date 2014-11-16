@@ -1,0 +1,9 @@
+﻿{
+  "$schema": "http://schemastore.org/schemas/json/webjob-publish-settings.json",
+  "webJobName": "WebJobHourlyHeroUpdate",
+  "startTime": "2014-11-16T00:00:00-06:00",
+  "endTime": "2014-11-17T00:00:00-06:00",
+  "jobRecurrenceFrequency": "Hour",
+  "interval": 1,
+  "runMode": "Scheduled"
+}

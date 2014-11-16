@@ -112,4 +112,68 @@ and run it locally.
 STEP 11 - Attempt to deploy to Azure.
 
 
+Note: I haven't added these last two steps to the 
+Powershell script yet.  If you can figure out how
+to do that, please do contribute back to the 
+project by adding and sending me a pull request.
 
+
+STEP 12 - Setup WebJobHourlyHeroUpdate
+
+This WebJob must run once per hour.  In the Solution Explorer,
+right-click the project's name and select "Publish as Azure WebJob"
+(blue Microsoft Azure icon).
+
+WebJob run mode: Run on a Schedule
+Recurrence: Recurring Job
+Recur ever: 1 Hour
+Check the "No End Date" checkbox
+
+Click the OK button.
+
+On the next dialog, select a publish target:
+
+Microsoft Azure Websites
+
+Sign in or import your subscription if needed
+
+Select the existing Website that contains the WebSite
+this WebJob will be associated with.  Ex. HeroVsZombie
+Validate the connection settings
+Click the Publish button
+
+
+STEP 13 - Setup WebJobActivityQueueProcessor
+
+This WebJob must run continuously.  Just like in
+step 12, In the Solution Explorer, right-click 
+the project's name and select "Publish as Azure WebJob"
+(blue Microsoft Azure icon).
+
+WebJob run mode: Run continuously
+
+Click the OK button.
+
+On the next dialog, select a publish target:
+
+Microsoft Azure Websites
+
+Sign in or import your subscription if needed
+
+Select the existing Website that contains the WebSite
+this WebJob will be associated with.  Ex. HeroVsZombie
+Validate the connection settings
+Click the Publish button.
+
+
+STEP 14 - Validate they are working.
+
+In the Azure Management Portal, go to your Azure Website
+and select the WebJobs tab.  You should have the two WebJobs
+listed, each Enabled.
+
+Monitor the logs (right) to see the last times they 
+operated and whether they were successful or not.
+Run through the operation of the website and see if
+you get green success statuses in the log details for
+each.
