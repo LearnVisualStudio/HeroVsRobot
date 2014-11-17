@@ -69,7 +69,7 @@ namespace HeroVsRobot
 
 
 
-
+/*
 #if !DEBUG
           
           bool enableSocialLogins; 
@@ -87,7 +87,7 @@ namespace HeroVsRobot
           }
 
 #endif
-
+*/
         }
     }
 }
