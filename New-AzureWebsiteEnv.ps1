@@ -370,6 +370,7 @@ Write-Verbose "[Start] Adding settings to website: $Name"
 $appSettings = @{ ` 
     "StorageAccountName" = $storageAccountName; ` 
     "StorageAccountAccessKey" = $storage.AccessKey; ` 
+	"EnableSocialLogins" = "false"; ` 
     "MicrosoftAuthClientId" = ""; `
     "MicrosoftAuthClientSecret" = ""; `
     "TwitterAuthConsumerKey" = ""; `

@@ -66,10 +66,6 @@ namespace HeroVsRobot
             //    ClientSecret = ""
             //});
 
-
-
-
-/*
 #if !DEBUG
           
           bool enableSocialLogins; 
@@ -87,7 +83,7 @@ namespace HeroVsRobot
           }
 
 #endif
-*/
+
         }
     }
 }
